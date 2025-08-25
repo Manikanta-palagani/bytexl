@@ -4,6 +4,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   background-color: rgb(8, 8, 95);
+  height: 80px;
   color: white;
   padding: 10px 20px;
 }
@@ -15,24 +16,32 @@ ul {
   align-items: center;
   padding: 0;
   margin: 0;
+  
 }
 
 ul li {
-  margin: 0 10px;
+  margin: 0 50px;
   cursor: pointer;
   list-style: none;
+  font-size: large;
 }
 
 .right-section input {
   padding: 5px;
   border: none;
+  height: 30px;
   border-radius: 3px;
+  max-width: 200px;
 }
+
+
+
 
 .right-section button {
   padding: 5px 10px;
   margin-left: 5px;
   border: none;
+  height: 40px;
   margin-left: -5px;
   border-radius: 3px;
   background-color: green;
@@ -40,12 +49,13 @@ ul li {
   cursor: pointer;
 }
 .middle-section ul li:hover {
-  background-color: yellow;
-  color: blue;
+  
+  color: yellow;
+  text-decoration: underline;
 }
 
 .logo {
-  width: 100px;
+  width: 150px;
   height: auto;
 }
 
@@ -53,5 +63,19 @@ ul li:hover{
   color: yellow;
 }
 
+@media (max-width: 800px) {
+  nav {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
 
+  ul {
+    flex-direction: column;
+    gap: 15px;
+  }
 
+  .right-section {
+    margin-top: 10px;
+  }
+}
